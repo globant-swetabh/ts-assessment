@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "20001fa7-4506-4a80-b7d4-0926a3ca46c2",
+		"name": "TS_Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34691938"
+	},
+	"item": [
+		{
+			"name": "Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Item3\",\n    \"quantity\": 220\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "Get single items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/items/:itemId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "itemId",
+							"value": "5zrpp5z6a",
+							"uuid": "d050fa83-424e-4028-b9a0-847755d959d3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"newItem\",\n    \"quantity\": 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/items/:itemId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "itemId",
+							"value": "pomn1m30z",
+							"uuid": "1be32bab-2f34-42d6-afe0-d010fb48881b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"newItem\",\n    \"quantity\": 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete/:itemId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "itemId",
+							"value": "qodda0m2v",
+							"uuid": "7c9b81b1-f7f1-4c58-b860-7cd9bcd461ec"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
